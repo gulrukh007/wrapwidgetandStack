@@ -1,1 +1,165 @@
+import 'package:flutter/material.dart';
+
+class ColorChange extends StatefulWidget {
+  const ColorChange({Key? key}) : super(key: key);
+
+  @override
+  State<ColorChange> createState() => _ColorChangeState();
+}
+
+class _ColorChangeState extends State<ColorChange> {
+
+  int index = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ColorChange Riddle'),
+        centerTitle: true,
+        backgroundColor: Colors.grey,
+      ),
+      body: Wrap(
+        children: [
+          //1st row created BUTTONS-----------------------------
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(onPressed: (){
+                setState(() {
+                  index = 1;
+                });
+              },
+                  child: Text('Yellow color'),
+              style: ElevatedButton.styleFrom(primary: Colors.limeAccent),),
+              ElevatedButton(onPressed: (){
+                setState(() {
+                  index = 2;
+                });
+              },
+                child: Text('Yellow color'),
+                style: ElevatedButton.styleFrom(primary: Colors.lightGreenAccent),),
+              ElevatedButton(onPressed: (){
+                  setState(() {
+                    index = 3;
+                  });
+              },
+                child: Text('Yellow color'),
+                style: ElevatedButton.styleFrom(primary: Colors.tealAccent,),),
+            ],
+          ),
+          //2nd row for containers-----------------------------------------------------------------
+          SizedBox(
+            height: 150,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InkWell(
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: index == 1? Colors.yellowAccent:index == 2?
+                  Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal,
+                ),
+              ),
+              InkWell(
+                child: Container(
+                  height: 50,
+                  width: 50,
+                    color: index == 1? Colors.yellowAccent:index == 2?
+                    Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal
+                ),
+              ),
+              InkWell(
+                child: Container(
+                  height: 50,
+                  width: 50,
+                    color: index == 1? Colors.yellowAccent:index == 2?
+                    Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal
+                ),
+              ),
+
+            ],
+          ),
+          SizedBox(
+            height: 100,
+          ),
+          //3rd row for containers---------------------------------------------------------------
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InkWell(
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: index == 1? Colors.yellowAccent:index == 2?
+                  Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal,
+                ),
+              ),
+              InkWell(
+                child: Container(
+                    height: 50,
+                    width: 50,
+                    color: index == 1? Colors.yellowAccent:index == 2?
+                    Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal
+                ),
+              ),
+              InkWell(
+                child: Container(
+                    height: 50,
+                    width: 50,
+                    color: index == 1? Colors.yellowAccent:index == 2?
+                    Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal
+                ),
+              ),
+
+            ],
+          ),
+         // 3rd container row----------------------------------------------------------------
+          SizedBox(
+            height: 100,
+          ),
+          //3rd row for containers---------------------------------------------------------------
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InkWell(
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: index == 1? Colors.yellowAccent:index == 2?
+                  Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal,
+                ),
+              ),
+              InkWell(
+                child: Container(
+                    height: 50,
+                    width: 50,
+                    color: index == 1? Colors.yellowAccent:index == 2?
+                    Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal
+                ),
+              ),
+              InkWell(
+                child: Container(
+                    height: 50,
+                    width: 50,
+                    color: index == 1? Colors.yellowAccent:index == 2?
+                    Colors.lightGreenAccent: index == 3? Colors.tealAccent: Colors.teal
+                ),
+              ),
+
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
+
+  //Here is the place to write functions
+
+
+
+}
 
